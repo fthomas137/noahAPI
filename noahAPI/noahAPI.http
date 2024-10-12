@@ -1,0 +1,6 @@
+@noahAPI_HostAddress = http://localhost:5230
+
+GET {{noahAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
