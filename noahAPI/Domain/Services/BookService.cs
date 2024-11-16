@@ -37,7 +37,10 @@ namespace noahAPI.Domain.Services
                 Description = bookRequest.Description,
                 Price = bookRequest.Price
             };
-            return _bookRepository.Create(book);
+            var result = _bookRepository.Create(book);
+            if(result)
+                return book;
+            return null;
         }
     }
 }

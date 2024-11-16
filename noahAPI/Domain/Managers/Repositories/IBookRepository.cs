@@ -5,7 +5,7 @@ namespace noahAPI.Domain.Managers.Repositories
     public interface IBookRepository
     {
         List<Book> GetAll();
-        Book Create(Book book);
+        bool Create(Book book);
 
     }
 }

@@ -40,11 +40,11 @@ namespace noahAPI.Domain.Managers.Repositories
             return _books;
         }
 
-        public Book Create(Book book)
+        public bool Create(Book book)
         {
             book.Id = _books.OrderBy(x => x.Id).Last().Id + 1;
             _books.Add(book);
-            return book;
+            return true;
         }
     }
 }

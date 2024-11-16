@@ -31,6 +31,8 @@ namespace noahAPI.Controllers
             if (book is null)
                 return BadRequest();
             var newBook = _bookService.Create(book);
+            if(newBook is null)
+                return BadRequest();
             return Ok(newBook);
         }
     }
